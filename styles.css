@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
 :root {
   /* COLOR SCHEME */
   --color-primary: #de0f66;
@@ -49,7 +51,7 @@ html {
 }
 
 body {
-  font-family: cursive;
+  font-family: 'Montserrat', cursive, sans-serif;
   font-weight: 400;
   font-size: var(--default-font-size);
   line-height: 1.5;
@@ -133,6 +135,10 @@ section:not(:last-child) {
   color: var(--color-white);
 }
 
+.display-before-550 {
+  display: none;
+}
+
 .heading-secondary {
   margin-bottom: 1rem;
   text-decoration: underline;
@@ -140,6 +146,7 @@ section:not(:last-child) {
 
 .resume__para {
   text-indent: 5rem;
+  hyphens: auto;
 }
 
 ul {
@@ -156,29 +163,73 @@ ul {
   border-bottom: 1px solid var(--color-primary);
 }
 
-@media only screen and (max-width: 37.5em) {
-  /* small-tab   600px */
-  html {
-    font-size: 56.25%; /* 9px/16px = 56.25%  default browser font size = 16px */
+
+@media only screen and (max-width: 850px) {
+  
+  .header {
+    margin-bottom: 3rem;
+  }
+
+  body {
+    padding: 0;
   }
 }
 
-@media only screen and (max-width: 30em) {
-  /* phone */
-  html {
-    font-size: 43.75%; /* 8px/16px = 43.75%  default browser font size = 16px */
+@media only screen and (max-width: 750px) {
+  .heading-primary {
+    font-size: 3.4rem;
+  }
+
+  .container {
+    padding: 3rem;
   }
 }
 
-/* @media only screen and (max-width: 22.5em) {
-  html {
-    font-size: 40%;
-  }
-} */
+@media only screen and (max-width: 551px) {
 
-@media only screen and (min-width: 112.5em) {
-  /* large-desktop */
+  .display-before-550 {
+    display: inline-block;
+  }
+  
+  .display-after-550 {
+    display: none;
+  }
+
+  .header__bar {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+
+  .heading-primary {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 300px) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  /* tab-port */
   html {
     font-size: 75%;
   } /* 12px/16px = 75%  default browser font size = 16px */
+
+
 }

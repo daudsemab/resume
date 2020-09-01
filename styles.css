@@ -3,36 +3,14 @@
 :root {
   /* COLOR SCHEME */
   --color-primary: #de0f66;
-  /* --color-primary-light: #ff3366;
-  --color-primary-dark: #ba265d; */
 
   --color-secondary: #c726a4;
-  /* --color-secondary-light: #fab970;
-  --color-secondary-dark: #ff7730; */
-
-  /* --color-tertiary-light: #2998ff;
-  --color-tertiary-dark: #5643fa; */
 
   --color-white: #fff;
-
-  /* --color-gray-light-1: #faf9f9;
-  --color-gray-light-2: #f4f2f2;
-  --color-gray-light-3: #f0eeee;
-  --color-gray-light-4: #ccc; */
-
-  --color-gray-dark-1: #999;
-  --color-gray-dark-2: #777;
-  --color-gray-dark-3: #333;
-
   --color-black: rgb(22, 22, 22);
 
   /* FONTS */
   --default-font-size: 1.6rem;
-
-  /* SHADOWS */
-  --shadow-light: 0 0.5rem 2rem rgba(var(--color-black), 0.2);
-  --shadow-med: 0 1rem 3rem rgba(var(--color-black), 0.3);
-  --shadow-dark: 0 2rem 5rem rgba(var(--color-black), 0.3);
 }
 
 /* for low level basics such as
@@ -60,11 +38,11 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -74,7 +52,7 @@ body {
     var(--color-secondary)
   );
   border: 1px solid var(--color-white);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 ::selection {
@@ -157,21 +135,29 @@ ul {
   text-decoration: none;
 }
 
-.para-link:hover,
-.para-link:active {
-  padding-bottom: 2px;
-  border-bottom: 1px solid var(--color-primary);
+/* --------- MEDIA QUIRIES --------- */
+
+@media (hover:hover) {
+  .para-link:hover,
+  .para-link:active {
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--color-primary);
+  }
 }
 
 
 @media only screen and (max-width: 850px) {
-  
+
   .header {
     margin-bottom: 3rem;
   }
 
   body {
     padding: 0;
+  }
+
+  .container {
+    border: none;
   }
 }
 
@@ -226,10 +212,7 @@ ul {
 }
 
 @media only screen and (min-width: 980px) {
-  /* tab-port */
   html {
     font-size: 75%;
   } /* 12px/16px = 75%  default browser font size = 16px */
-
-
 }
